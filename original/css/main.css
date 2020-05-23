@@ -74,6 +74,9 @@ button:hover{
 
 .main-header {
     background-color: #131c27;
+    position: sticky;
+    top: 0;
+    z-index: 3;
     color: #fff;
 
 }
