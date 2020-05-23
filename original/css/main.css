@@ -283,10 +283,16 @@ footer{
     background: rgba(19, 28, 39, 1);
 }
 
+footer h5{
+    flex: 1 1 40rem;
+}
+
 footer ul{
     display: flex;
     list-style: none;
     flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .footer-wrapper{
@@ -296,6 +302,7 @@ footer ul{
     margin: auto;
     align-items: center;
     min-height: 10vh;
+    flex-wrap: wrap;
 
 }
 
@@ -336,6 +343,15 @@ footer ul{
     .locations-inner h3{
         background: rgba(19,28,39,0.8);
         -webkit-text-fill-color: white;
+    }
+    .form-wrapper{
+        width: 100%;
+    }
+    footer{
+        text-align: center;
+    }
+    footer h5{
+        padding-bottom: 3rem;
     }
 
 }
