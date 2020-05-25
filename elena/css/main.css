@@ -4,19 +4,19 @@
     box-sizing: border-box;
 }
 
-@font-face{
-    font-family: 'Ruhl';
-    src: url('/fonts/FrankRuhlLibre-Regular.ttf');
+@font-face {
+    font-family: "Ruhl";
+    src: url("/fonts/FrankRuhlLibre-Regular.ttf");
 }
 
-@font-face{
-    font-family: 'Ruhl Medium';
-    src: url('/fonts/FrankRuhlLibre-Medium.ttf');
+@font-face {
+    font-family: "Ruhl Medium";
+    src: url("/fonts/FrankRuhlLibre-Medium.ttf");
 }
 
-@font-face{
-    font-family: 'Vibes';
-    src: url('/fonts/GreatVibes-Regular.ttf');
+@font-face {
+    font-family: "Vibes";
+    src: url("/fonts/GreatVibes-Regular.ttf");
 }
 
 html {
@@ -31,8 +31,6 @@ html {
     --gray-text: #525252;
 }
 
-
-
 h1 {
     font-size: var(--header1);
 }
@@ -45,7 +43,6 @@ a,
 p {
     font-size: var(--text);
 }
-
 
 h2 {
     font-size: var(--header2);
@@ -60,9 +57,7 @@ h5 {
     font-size: var(--header1);
 }
 
-
-
-ul{
+ul {
     list-style: none;
 }
 
@@ -71,29 +66,29 @@ a {
     color: #000;
 }
 
-.flex{
+.flex {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-body{
+body {
     font-family: "Ruhl", sans-serif;
+    animation: opening 1s ease-in-out;
 }
 
-h1{
-    font-family: 'Vibes', sans-serif;
+h1 {
+    font-family: "Vibes", sans-serif;
 }
 
-.main-head{
-    box-shadow: 0px 10px 10px rgba(0,0,0, 0.1);
+.main-head {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 2;
     position: relative;
-
 }
 
-nav{
+nav {
     width: 90%;
     margin: auto;
     display: flex;
@@ -102,18 +97,17 @@ nav{
     padding: 2rem 0rem;
 }
 
-#logo{
+#logo {
     flex: 1 1 20rem;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     justify-content: space-around;
     flex: 1 1 20rem;
-
 }
 
-.hero{
+.hero {
     min-height: 90vh;
     width: 95%;
     margin: 0 0 0 auto;
@@ -122,45 +116,76 @@ nav{
     overflow: hidden;
 }
 
-.hero-intro{
+.hero-intro {
     flex: 2 1 40rem;
-    text-align: center; 
+    text-align: center;
 }
 
-.hero-intro p{
+.hero-intro p {
     padding: 5rem 10rem;
 }
 
-.hero-intro h2{
+.hero-intro h2 {
     padding-top: 3rem;
 }
 
-.hero-intro a{
+.hero-intro a {
     padding: 2rem 8rem;
     border: 3px solid #000;
     margin-bottom: 4rem;
 }
 
-.hero-images{
+.hero-images {
     flex: 1 1 40rem;
     background: linear-gradient(#dad8dd, #dad1da);
     position: relative;
     z-index: 1;
 }
 
-.hero-helena{
+.hero-helena {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.plant{
+.plant {
     position: absolute;
     bottom: 0;
     left: -20%;
     z-index: -1;
+    transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+    animation: plant-entrance 1.5s ease-in-out 0.5s forwards,
+    plant-shake 2.5s infinite ease alternate-reverse 2s;
+    transform-origin: bottom;
 }
 
-.plant2{
+.plant2 {
     left: 40%;
+}
+
+@keyframes opening {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes plant-entrance {
+    from {
+        transform: translateY(10%) rotateZ(-10deg) rotateX(-90deg);
+    }
+    to {
+        transform: translateY(0%) rotateZ(0deg) rotateX(0deg);
+    }
+}
+
+@keyframes plant-shake {
+    from {
+        transform: rotateZ(-5deg);
+    }
+    to {
+        transform: rotateZ(0deg);
+    }
 }
