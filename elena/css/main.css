@@ -342,13 +342,19 @@ footer{
     align-items: center;
     padding: 3rem 5%;
     background: var(--background-color);
+    flex-wrap: wrap;
 }
 
 footer ul{
     display: flex;
     flex: 1 1 40rem;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+}
+
+footer h4{
+    flex: 3 1 40rem;
+    font-size: calc(1.4rem + 1vw);
 }
 
 @media screen and (max-width: 842px) {
@@ -439,5 +445,19 @@ footer ul{
 
     .gallery-head {
         display: none;
+    }
+
+    .contact img{
+        display: none;
+    }
+
+    footer ul{
+        order: 1;
+    }
+
+    footer h4{
+        order: 2;
+        text-align: center;
+        padding: 1rem;
     }
 }
